@@ -8,12 +8,26 @@ import { AppComponent }   from './app.component';
 import { ProductService } from './product.service';
 
 import {CarouselModule} from 'primeng/carousel';
+import { CarouselComponent } from './carousel/carousel.component';
+import { TableComponent } from './table/table.component';
+import { CustomerService } from './table/customerservice';
+import {TableModule} from 'primeng/table';
+import {CalendarModule} from 'primeng/calendar';
+import {SliderModule} from 'primeng/slider';
+import {DialogModule} from 'primeng/dialog';
+import {MultiSelectModule} from 'primeng/multiselect';
+import {ContextMenuModule} from 'primeng/contextmenu';
 import {ButtonModule} from 'primeng/button';
 import {ToastModule} from 'primeng/toast';
+import {InputTextModule} from 'primeng/inputtext';
+import {ProgressBarModule} from 'primeng/progressbar';
+import {DropdownModule} from 'primeng/dropdown';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CarouselComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
@@ -22,9 +36,26 @@ import {ToastModule} from 'primeng/toast';
     ButtonModule,
     ToastModule,
     HttpClientModule,
+    FormsModule,
+    TableModule,
+    CalendarModule,
+		SliderModule,
+		DialogModule,
+		MultiSelectModule,
+		ContextMenuModule,
+		DropdownModule,
+		ButtonModule,
+		ToastModule,
+    InputTextModule,
+    ProgressBarModule,
+    HttpClientModule,
     FormsModule
+    
   ],
-  providers: [ProductService],
+  providers: [
+    ProductService,
+    CustomerService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
